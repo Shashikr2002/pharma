@@ -166,6 +166,16 @@ export const companyConfig = {
     researchers: 'https://images.pexels.com/photos/8442152/pexels-photo-8442152.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     dataReview: 'https://images.pexels.com/photos/8442555/pexels-photo-8442555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     experiments: 'https://images.pexels.com/photos/9243718/pexels-photo-9243718.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    blueCapsules: 'https://images.pexels.com/photos/4058105/pexels-photo-4058105.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    capsulesFlat: 'https://images.pexels.com/photos/3652097/pexels-photo-3652097.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    turquoiseCapsules: 'https://images.pexels.com/photos/29268302/pexels-photo-29268302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    capsulesScatter: 'https://images.pexels.com/photos/4058102/pexels-photo-4058102.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    pinkCapsules: 'https://images.pexels.com/photos/31406912/pexels-photo-31406912.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    pillsVarious: 'https://images.pexels.com/photos/161688/medical-tablets-pills-drug-161688.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  videos: {
+    heroLab: 'https://videos.pexels.com/video-files/8381459/8381459-uhd_2560_1440_25fps.mp4',
+    heroPills: 'https://videos.pexels.com/video-files/7033922/7033922-uhd_2560_1440_25fps.mp4',
   },
 };
 

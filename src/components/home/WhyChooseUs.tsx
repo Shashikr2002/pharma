@@ -4,6 +4,7 @@ import {
   Sparkles, Globe,
 } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
+import { PharmaPattern } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const iconMap: Record<string, React.ElementType> = {
@@ -17,8 +18,9 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28 bg-brand-soft-gray">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-20 md:py-28 bg-brand-soft-gray relative overflow-hidden">
+      <PharmaPattern variant="capsules" opacity={0.03} className="text-brand-navy" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeading
           eyebrow="Why Pharma Healthcare"
           title="Why Choose Us"

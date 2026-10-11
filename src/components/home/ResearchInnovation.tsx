@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Microscope, FlaskConical, TrendingUp, Lightbulb } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
+import { PharmaPattern } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const innovationPoints = [
@@ -12,8 +13,9 @@ const innovationPoints = [
 
 export default function ResearchInnovation() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <PharmaPattern variant="dna" opacity={0.025} className="text-brand-navy" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeading
           eyebrow="Innovation"
           title="Research and Innovation"

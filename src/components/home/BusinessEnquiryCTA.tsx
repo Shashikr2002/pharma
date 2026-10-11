@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { PharmaPattern, FloatingCapsules } from '@/components/ui/PharmaDecor';
 
 export default function BusinessEnquiryCTA() {
   return (
@@ -10,6 +11,8 @@ export default function BusinessEnquiryCTA() {
           backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,160,176,0.2) 0%, transparent 50%)',
         }} />
       </div>
+      <PharmaPattern variant="capsules" opacity={0.06} className="text-white" />
+      <FloatingCapsules className="text-white" />
 
       <div className="relative max-w-4xl mx-auto px-4 md:px-6 text-center">
         <motion.h2

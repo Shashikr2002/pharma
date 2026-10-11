@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { PharmaPattern, FloatingMolecules } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 function Counter({ value, suffix, label, note }: { value: number; suffix: string; label: string; note: string }) {
@@ -38,6 +39,8 @@ function Counter({ value, suffix, label, note }: { value: number; suffix: string
 export default function Counters() {
   return (
     <section className="py-20 md:py-24 bg-brand-navy relative overflow-hidden">
+      <PharmaPattern variant="molecules" opacity={0.07} className="text-white" />
+      <FloatingMolecules className="text-white" />
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-white blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-brand-accent blur-3xl" />

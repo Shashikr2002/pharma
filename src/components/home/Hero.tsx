@@ -1,28 +1,55 @@
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import { FloatingCapsules } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 export default function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const handleCanPlay = () => setVideoLoaded(true);
+    video.addEventListener('canplaythrough', handleCanPlay);
+    video.play().catch(() => {});
+    return () => video.removeEventListener('canplaythrough', handleCanPlay);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={companyConfig.images.heroBg}
           alt="Pharmaceutical manufacturing"
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover transition-opacity duration-1000 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/85 to-brand-navy/70" />
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={companyConfig.images.heroBg}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <source src={companyConfig.videos.heroLab} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/82 to-brand-navy/65" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-transparent to-brand-navy/30" />
+        <FloatingCapsules className="text-white z-10" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center py-32">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 text-center py-32">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold text-white mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold text-white mb-6"
         >
+          <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
           {companyConfig.tagline}
         </motion.span>
 
@@ -72,7 +99,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" />
     </section>
   );
 }

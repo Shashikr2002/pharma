@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
+import { PharmaPattern } from '@/components/ui/PharmaDecor';
 
 const testimonials = [
   {
@@ -43,6 +44,7 @@ export default function Testimonials() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      <PharmaPattern variant="pills" opacity={0.05} className="text-white" />
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/3 w-72 h-72 rounded-full bg-white blur-3xl" />
         <div className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full bg-brand-accent blur-3xl" />
