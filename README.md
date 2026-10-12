@@ -1,3 +1,18 @@
-# pharma
+# Pharma Healthcare
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-h7s3ydes)
+Committed to Healthier Lives — a pharmaceutical company website built with React, TypeScript, Vite, and Tailwind CSS.
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+- `npm run dev` — start the development server
+- `npm run build` — build for production
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
+- `npm run typecheck` — type-check the project
