@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FloatingCapsules } from '@/components/ui/PharmaDecor';
 
 interface PageBannerProps {
   title: string;
@@ -13,6 +14,7 @@ export default function PageBanner({ title, subtitle, image, breadcrumb }: PageB
       <div className="absolute inset-0 z-0">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/70" />
+        <FloatingCapsules className="text-white" />
       </div>
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.nav

@@ -35,6 +35,7 @@ export default function Navbar() {
           : 'bg-white/95 backdrop-blur-sm py-3'
       }`}
     >
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-navy via-brand-accent to-brand-navy" />
       <nav className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <div className="w-10 h-10 rounded-lg bg-brand-navy flex items-center justify-center">

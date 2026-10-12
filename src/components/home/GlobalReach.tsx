@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Globe2, MapPin, Plane, Building2 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
+import { FloatingCapsules } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const reachPoints = [
@@ -12,8 +13,9 @@ const reachPoints = [
 
 export default function GlobalReach() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <FloatingCapsules className="text-brand-navy" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <motion.div

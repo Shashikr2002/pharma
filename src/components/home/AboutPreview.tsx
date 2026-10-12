@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Reveal from '@/components/ui/Reveal';
+import { FloatingMolecules } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const highlights = [
@@ -13,8 +14,9 @@ const highlights = [
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <FloatingMolecules className="text-brand-navy" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Reveal>
             <div className="relative">

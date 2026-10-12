@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, BadgeCheck, FileCheck2, Stethoscope } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
+import { PharmaPattern } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const qualityPoints = [
@@ -13,6 +14,7 @@ const qualityPoints = [
 export default function QualityReliability() {
   return (
     <section className="py-20 md:py-28 bg-brand-light-blue relative overflow-hidden">
+      <PharmaPattern variant="molecules" opacity={0.03} className="text-brand-navy" />
       <div className="absolute top-0 right-0 w-1/3 h-full bg-white/50 -skew-x-12 origin-top-right" />
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-6">

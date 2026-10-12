@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HeartPulse, Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { PharmaPattern } from '@/components/ui/PharmaDecor';
 import { companyConfig } from '@/config/company';
 
 const footerLinks = [
@@ -12,8 +13,9 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy text-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 pt-16 pb-8">
+    <footer className="bg-brand-navy text-white relative overflow-hidden">
+      <PharmaPattern variant="molecules" opacity={0.04} className="text-white" />
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -83,7 +85,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Pharma Healthcare. All rights reserved.
           </p>
